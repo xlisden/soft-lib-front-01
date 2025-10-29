@@ -13,6 +13,6 @@ export class LibroService {
   constructor(private http: HttpClient) {}
 
   getLibros():Observable<LibroResponse> { // para llamadas asincronas / subscripciones
-
+    return this.http.get<LibroResponse>(`${this.apiUrl}/`);
   }
 }
