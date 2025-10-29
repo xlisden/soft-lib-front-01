@@ -22,6 +22,7 @@ export class LibroListComponent implements OnInit {
       next: (response) => {
         if (response.success && Array.isArray(response.data)) {
           this.libros = response.data;
+          console.log(this.libros);
         }
       },
       error: (error) => {
