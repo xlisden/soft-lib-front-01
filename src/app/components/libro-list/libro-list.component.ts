@@ -21,7 +21,7 @@ export class LibroListComponent implements OnInit {
     this.service.getLibros().subscribe({
       next: (response) => {
         if (response.success && Array.isArray(response.data)) {
-
+          this.libros = response.data;
         }
       },
       error: (error) => {
