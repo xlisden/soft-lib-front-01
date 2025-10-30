@@ -14,6 +14,8 @@ export class LibroListComponent implements OnInit {
   constructor(private service: LibroService) {}
 
   ngOnInit(): void {
+    console.log(`getlibros`);
+
     this.getLibros();
   }
 
