@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LibroListComponent } from './components/libro-list/libro-list.component';
+import { LibroFormComponent } from './components/libro-form/libro-form.component';
 
 export const routes: Routes = [
   {
@@ -12,7 +13,15 @@ export const routes: Routes = [
     component: LibroListComponent,
   },
   {
+    path: 'libros/nuevo',
+    component: LibroFormComponent,
+  },
+  {
+    path: 'libros/editar/:id',
+    component: LibroFormComponent,
+  },
+  {
     path: '**',
-    redirectTo: 'libros'
-  }
+    redirectTo: 'libros',
+  },
 ];

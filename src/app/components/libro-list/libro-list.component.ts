@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { LibroService } from '../../services/libro.service';
 import { Libro } from '../../models/libro.interface';
 import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-libro-list',
-  imports: [NgFor],
+  imports: [NgFor, RouterLink],
   templateUrl: './libro-list.component.html',
 })
 export class LibroListComponent implements OnInit {
