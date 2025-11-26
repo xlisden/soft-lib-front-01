@@ -52,6 +52,8 @@ console.log(`onsubmit`);
           console.log(response);
 
           this.libroForm.patchValue(response.data!);
+          console.log(`libroForm libroform =>`);
+          console.log(this.libroForm);
         }
       },
       error: (err) => {
