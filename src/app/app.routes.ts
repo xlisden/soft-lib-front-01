@@ -11,4 +11,8 @@ export const routes: Routes = [
     path: 'libros',
     component: LibroListComponent,
   },
+  {
+    path: '**',
+    redirectTo: 'libros'
+  }
 ];
