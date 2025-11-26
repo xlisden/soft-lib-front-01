@@ -9,8 +9,8 @@ import { NgFor } from '@angular/common';
   templateUrl: './libro-list.component.html',
 })
 export class LibroListComponent implements OnInit {
-
   libros: Libro[] = [];
+  error: string = '';
 
   constructor(private service: LibroService) {}
 
@@ -30,7 +30,20 @@ export class LibroListComponent implements OnInit {
       },
       error: (error) => {
         console.error(`LibroListComponent-getLibros = ${error}`);
-      }
+      },
+    });
+  }
+  eliminar(id: any) {
+    this.service.eliminar(id).subscribe({
+      next: (response) => {
+        if (response.success) {
+          this.getLibros();
+        }
+      },
+      error: (err) => {
+        this.error = 'Error al eliminar';;
+        console.error(err);
+      },
     });
   }
 }

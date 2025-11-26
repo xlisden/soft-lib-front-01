@@ -1,3 +1,5 @@
+<a [routerLink]="'/libros/nuevo'">Nuevo</a>
+<p>wolaa</p>
 <table>
   <thead>
     <tr>
@@ -10,10 +12,14 @@
 
   <tbody>
     <tr *ngFor="let libro of libros">
-      <td>{{libro.id}}</td>
-      <td>{{libro.titulo}}</td>
-      <td>{{libro.isbn}}</td>
-      <td>{{libro.editorial}}</td>
+      <td>{{ libro.id }}</td>
+      <td>{{ libro.titulo }}</td>
+      <td>{{ libro.isbn }}</td>
+      <td>{{ libro.editorial }}</td>
+      <td>
+        <a [routerLink]="['/libros/editar', libro.id]">Editar</a>
+        <button (click)="eliminar(libro.id)">Eliminar</button>
+      </td>
     </tr>
   </tbody>
 </table>

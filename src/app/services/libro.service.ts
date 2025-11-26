@@ -15,4 +15,8 @@ export class LibroService {
   getLibros():Observable<LibroResponse> { // para llamadas asincronas / subscripciones
     return this.http.get<LibroResponse>(`${this.apiUrl}/`);
   }
+
+  eliminar(id:any): Observable<LibroResponse> {
+    return this.http.delete<LibroResponse>(`${this.apiUrl}/${id}`);
+  }
 }
