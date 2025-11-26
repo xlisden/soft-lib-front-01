@@ -39,10 +39,18 @@ export class LibroFormComponent implements OnInit {
     });
   }
 
+  onSubmit() {
+console.log(`onsubmit`);
+
+  }
+
   getLibro(id: any) {
     this.service.getLibro(id).subscribe({
       next: (response) => {
         if (response.success && !Array.isArray(response.data)) {
+          console.log(`response getlibro libroform =>`);
+          console.log(response);
+
           this.libroForm.patchValue(response.data!);
         }
       },

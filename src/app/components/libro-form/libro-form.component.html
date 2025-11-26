@@ -1,1 +1,21 @@
-<p>libro-form works!</p>
+<form formGroup="libroForm" (ngSubmit)="onSubmit()">
+  <label for="">titulo</label>
+  <input type="text" formControlName="titulo" id="titulo">
+
+  <br>
+  <label for="">autor</label>
+  <input type="text" formControlName="autor" id="autor">
+
+
+  <br>
+  <label for="">isbn</label>
+  <input type="text" formControlName="isbn" id="isbn">
+
+  <br>
+  <label for="">editorial</label>
+  <input type="text" formControlName="editorial" id="editorial">
+
+  <br>
+  <button type="submit">submit</button>
+</form>
+
