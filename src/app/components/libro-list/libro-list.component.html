@@ -1,1 +1,19 @@
-<p>libro-list works!</p>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Titulo</th>
+      <th>ISBN</th>
+      <th>Editorial</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let libro of libros">
+      <td>{{libro.id}}</td>
+      <td>{{libro.titulo}}</td>
+      <td>{{libro.isbn}}</td>
+      <td>{{libro.editorial}}</td>
+    </tr>
+  </tbody>
+</table>
