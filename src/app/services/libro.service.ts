@@ -19,4 +19,8 @@ export class LibroService {
   eliminar(id:any): Observable<LibroResponse> {
     return this.http.delete<LibroResponse>(`${this.apiUrl}/${id}`);
   }
+
+  getLibro(id: any): Observable<LibroResponse> {
+    return this.http.get<LibroResponse>(`${this.apiUrl}/${id}`);
+  }
 }
