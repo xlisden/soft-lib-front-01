@@ -40,8 +40,7 @@ export class LibroFormComponent implements OnInit {
   }
 
   onSubmit() {
-console.log(`onsubmit`);
-
+    console.log(`onsubmit`);
   }
 
   getLibro(id: any) {

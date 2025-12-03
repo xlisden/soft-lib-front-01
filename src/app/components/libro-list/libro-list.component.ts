@@ -24,8 +24,14 @@ export class LibroListComponent implements OnInit {
   getLibros(): void {
     this.service.getLibros().subscribe({
       next: (response) => {
+        console.log(`response`);
+        console.log(response);
+
+
         if (response.success && Array.isArray(response.data)) {
+          console.log(`en el if`);
           this.libros = response.data;
+          console.log(`this.libros = response.data;`);
           console.log(this.libros);
         }
       },
@@ -42,7 +48,7 @@ export class LibroListComponent implements OnInit {
         }
       },
       error: (err) => {
-        this.error = 'Error al eliminar';;
+        this.error = 'Error al eliminar';
         console.error(err);
       },
     });
