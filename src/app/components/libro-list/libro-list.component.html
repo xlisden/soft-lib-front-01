@@ -1,1 +1,29 @@
-<p>libro-list works!</p>
+<a routerLink="/libros/nuevo">Nuevo Libro</a>
+
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Titulo</th>
+    <th>Autor</th>
+    <th>Categoría</th>
+    <th>ISBN</th>
+    <th>Editorial</th>
+    <th>Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let libro of libros">
+    <td> {{libro.id}} </td>
+    <td> {{libro.titulo}} </td>
+    <td> {{libro.autor}} </td>
+    <td> {{libro.categoria}} </td>
+    <td> {{libro.isbn}} </td>
+    <td> {{libro.editorial}} </td>
+    <td>
+      <a [routerLink]="['/libros/editar/', libro.id]">Editar</a>
+      <button (click)="delete(libro.id!)">Eliminar</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

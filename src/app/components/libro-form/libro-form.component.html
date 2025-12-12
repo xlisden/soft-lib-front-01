@@ -1,0 +1,20 @@
+<form [formGroup]="libroForm" (ngSubmit)="onSubmit()" )>
+  <label>Titulo</label>
+  <input type="text" formControlName="titulo">
+  <br>
+
+  <label>ISBN</label>
+  <input type="text" formControlName="isbn">
+
+  <label>Editorial</label>
+  <input type="text" formControlName="editorial">
+
+  <label>Categoria</label>
+  <input type="number" formControlName="categoriaId">
+
+  <label>Autor</label>
+  <input type="number" formControlName="autorId">
+
+  <button type="submit">Guardar</button>
+  <button routerLink="/libros">Cancelar</button>
+</form>
