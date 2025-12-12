@@ -30,14 +30,11 @@ export class LibroListComponent implements OnInit {
       next: (response: { success: any; data: Libro[]; }) => {
         if (response.success && Array.isArray(response.data)) {
           this.libros = response.data;
-          console.log(this.libros);
         }
       },
-      error: (error: any) => {
-        console.error(`LibroListComponent-getAll = ${error}`);
-      }
     });
   }
+
 
   delete(id: number): void {
     if (confirm('Seguro de eliminar el libro?')) {

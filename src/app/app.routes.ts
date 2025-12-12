@@ -1,6 +1,6 @@
-import {Routes} from '@angular/router';
-import {LibroListComponent} from './components/libro-list/libro-list.component';
-import {LibroFormComponent} from './components/libro-form/libro-form.component';
+import { Routes } from '@angular/router';
+import { LibroListComponent } from './components/libro-list/libro-list.component';
+import { LibroFormComponent } from './components/libro-form/libro-form.component';
 
 export const routes: Routes = [
   {
